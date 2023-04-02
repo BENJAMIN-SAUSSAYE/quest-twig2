@@ -1,0 +1,85 @@
+/***********     LOGO     ***********/
+.logo-container {
+    padding: 0 var(--spaccing2) 0 var(--spaccing2);
+}
+
+.logo {
+    width: clamp(30px, 7vw, 150px);
+}
+
+/***********     BURGER     ***********/
+.burger {
+    display: none;
+    align-items: center;
+}
+
+.burger svg {
+    width: 40px;
+    height: 40px;
+    fill: var(--light-color);
+}
+
+/***********     NAVBAR     ***********/
+nav {
+    display: flex;
+    background-color: var(--secondary-color);
+}
+
+nav ul.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: clamp(var(--spaccing), 3vw, var(--spaccing3));
+    list-style: none;
+    font-weight: 600;
+    font-size: clamp(var(--font-size), 1.6vw, var(--font-size3));
+    letter-spacing: clamp(0.1rem, 0.1vw, 0.3rem);
+    text-transform: uppercase;
+}
+
+nav ul.links li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 clamp(var(--spaccing), 1.2vw, var(--spaccing1)) 0 clamp(var(--spaccing), 1.2vw, var(--spaccing1));
+    height: var(--navbarheight);
+    cursor: pointer;
+}
+
+nav ul.links li a {
+    text-decoration: none;
+    color: var(--light-color);
+    text-shadow: 2px 2px 9px var(--dark-color);
+}
+
+nav ul.links li:hover {
+    background-color: var(--secondary-color);
+    animation: color-me-in 500ms;
+    /* border-bottom: calc(var(--font-size)/2) solid var(--light-color); */
+}
+
+@keyframes color-me-in {
+
+    /* You could think of as "step 1" */
+    0% {
+        background: var(--secondary-color);
+    }
+
+    /* You could think of as "step 2" */
+    100% {
+        background: var(--primary-color);
+    }
+}
+
+.logo-container .logo {
+    transform: rotate(0deg) scale(1);
+    transition: all 0.7s ease-in-out;
+}
+
+nav:hover .logo {
+    transform: rotate(360deg) scale(1.5);
+}
+
+nav .closeburger {
+    display: none;
+}

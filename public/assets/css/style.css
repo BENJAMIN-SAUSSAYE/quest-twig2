@@ -1,0 +1,61 @@
+:root {
+    --primary-color: #4697FF;
+    --secondary-color: #D92F38;
+    --medium-color: #dad8d8;
+    --third-color: #F2CB09;
+    --dark-color: #2c2b2b;
+    --light-color: #ffffff;
+
+    --fontfamily-text: Verdana, Geneva, Tahoma, sans-serif;
+    --fontfamily-title: Arial;
+
+    --spaccing: 0.5rem;
+    --spaccing1: calc(var(--spaccing) * 2);
+    --spaccing2: calc(var(--spaccing) * 4);
+    --spaccing3: calc(var(--spaccing) * 6);
+
+    --border-radius: 1.1rem;
+
+    --font-size: 0.9rem;
+    --font-size1: calc(var(--font-size) * 1.5);
+    --font-size2: calc(var(--font-size) * 3);
+    --font-size3: calc(var(--font-size) * 4.5);
+
+    --box-shadow: -2px 2px 8px var(--dark-color);
+    --text-shadow: 2px 2px 4px var(--dark-color);
+
+    --section-max-width: 65ch;
+    --header-min-height: 250px;
+    --navbarheight: clamp(50px, 7.5vw, 130px);
+    --widthBackgroudPipe: 12.5vw;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fontfamily-text);
+    font-size: var(--font-size);
+    line-height: 150%;
+}
+
+main {
+    padding-top: calc(var(--navbarheight) + var (--spaccing2));
+    background-image: url("/asset/background-clouds.png");
+    background-attachment: fixed;
+}
+
+.mainTitleSection {
+    font-family: var(--fontfamily-title);
+    font-size: clamp(var(--font-size1), 6vw, var(--font-size3));
+    color: var(--light-color);
+    padding-top: 5vh;
+    padding-bottom: 7vh;
+    padding-left: 5vw;
+    text-shadow: var(--text-shadow);
+    letter-spacing: clamp(1px, 0.6rem, 8px);
+}
