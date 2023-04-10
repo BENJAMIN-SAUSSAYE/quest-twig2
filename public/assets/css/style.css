@@ -26,7 +26,7 @@
 
     --section-max-width: 65ch;
     --header-min-height: 250px;
-    --navbarheight: clamp(50px, 7.5vw, 130px);
+    --navbarheight: clamp(50px, 5vh, 130px);
     --widthBackgroudPipe: 12.5vw;
     scroll-behavior: smooth;
 }
@@ -44,9 +44,13 @@ body {
 }
 
 main {
-    padding-top: calc(var(--navbarheight) + var (--spaccing2));
-    background-image: url("/asset/background-clouds.png");
-    background-attachment: fixed;
+    padding: var(--spaccing1);
+    padding-top: var(--navbarheight);
+    height: 85vh;
+}
+
+footer {
+    padding: var(--spaccing1);
 }
 
 .mainTitleSection {
